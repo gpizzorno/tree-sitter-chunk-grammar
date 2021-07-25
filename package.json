@@ -1,0 +1,40 @@
+{
+  "name": "tree-sitter-chunk-grammar",
+  "version": "0.1.0",
+  "description": "tree-sitter grammar for NLTK chunking rulesets",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "regex",
+    "nltk",
+    "chunker"
+  ],
+  "author": "Gabe Pizzorno <pizzorno@fas.harvard.edu>",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpizzorno/tree-sitter-chunk-grammar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gpizzorno/tree-sitter-chunk-grammar/issues"
+  },
+  "homepage": "https://github.com/gpizzorno/tree-sitter-chunk-grammar#readme",
+  "dependencies": {
+    "nan": "^2.14.1"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.19.1"
+  },
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.chunkgrammar",
+      "file-types": [
+        "chk"
+      ],
+      "injection-regex": "^chunkgrammar$"
+    }
+  ]
+}

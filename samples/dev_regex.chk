@@ -1,0 +1,5 @@
+([a-zA-Z\+]*|[0-9]+)\.[a-z]+\b[-a-zA-Z0-9\/\/=]* # comment
+# another comment
+TAG:
+<NOUN.*>
+<[A-Z]+>

@@ -1,0 +1,25 @@
+# units of measurement
+
+UNIT:
+{<.*Function=Unit.*> <NUM.*> <NOUN-Case=Gen.*>}
+<.*Function=Unit.*> {<VERB.*VerbForm=Part.* | NOUN-Case=Gen.*>* <NUM.*>}
+{<NUM.*> <.*Function=Unit.*> <VERB.*VerbForm=Part.* | NOUN-Case=Gen.*>*}
+}<NUM.*>{
+
+QT:
+{<NUM.*Gender=(Neut|Fem|Masc).*Number=(Sing|Plur).*>} <NUM.*Gender=\\4\|Number=\\5.*>* <NOUN.*Gender=\\4\|Number=\\5.*>
+{<NOUN.*Gender=(Neut|Fem|Masc)\|Number=(Sing|Plur).*> <NUM.*Gender=\\4.*Number=\\5.*>+}
+<NUM.*Form=Digit.* | NUM-Feats=0>}{<NOUN.*>
+{<NOUN.*> <NUM.*Form=Digit.* | NUM-Feats=0>+}
+{<.*Lemma=(item|et).*> <NUM(?!.*Object=1).*|.*Lemma=quidam.*>+}  # some comment
+}<NOUN.*>{
+}<.*Lemma=(item|et|de).*>{
+
+DSC-Mag:
+{<.*Lemma=de.*>? <QT> (?<=<UNIT>) <ADP.*> <QT> <UNIT>}
+{<.*Lemma=de.*>? <UNIT|QT> <UNIT|QT>+}
+<.*Lemma=de.*>{}<UNIT|QT> <UNIT|QT>+
+{<.*Lemma=de.*>? <QT> <UNIT> (<CCONJ.*> <.*Lemma=circa.*>)? (<.*Lemma=(cum|et).*> <.*Lemma=(dimidium|medius)>)?}
+<.*Lemma=de.*>{}<UNIT|QT> <UNIT|QT>+
+
+# end comment
