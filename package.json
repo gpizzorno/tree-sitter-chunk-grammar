@@ -10,7 +10,7 @@
     "chunker"
   ],
   "author": "Gabe Pizzorno <pizzorno@fas.harvard.edu>",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gpizzorno/tree-sitter-chunk-grammar.git"
