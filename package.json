@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-chunk-grammar",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "tree-sitter grammar for NLTK chunking rulesets",
   "main": "bindings/node",
   "keywords": [
@@ -23,7 +23,7 @@
     "nan": "^2.14.2"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.19.1"
+    "tree-sitter-cli": "^0.18.3"
   },
   "scripts": {
     "test": "tree-sitter test"
